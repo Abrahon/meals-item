@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Meal item</title>
+</head>
+
+<body>
+    <h3>Base Html</h3>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-10">
+
+        {% for meal in meals %}
+
+        <div class="h-100 ms-10 gap-10" >
+            <img class="card-img-top" src="{{ meal.strMealThumb }}" alt="">
+            <h4 class="text-center">{{meal.strMeal}}</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor molestiae voluptate inventore! Incidunt id, ea sint officia, minima atque placeat aut assumenda inventore recusandae, fugit rem beatae in explicabo impedit?</p>
+        </div>
+        
+        {% endfor %}
+
+</div>
+    {% block content %}{%endblock%}
+</body>
+
+</html>
